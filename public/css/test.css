@@ -532,15 +532,15 @@ footer {
 	color: indianred;
 }
 #userinfo{
-  width: 60%;
+  width: auto;
   height: 250px;
   overflow: auto;
   padding: 10px;
   font-size: 20px;
-  border-radius: 10px;
-  margin-left: 60%;
-  background-color: #c2c2c2;
-  color: #000;
+  border-radius: 30px;
+  margin:auto;
+  background-color: orange;
+  color: white;
 }
 #userinfo h1{
   margin: 0;

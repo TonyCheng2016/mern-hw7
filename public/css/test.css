@@ -11,24 +11,6 @@ p {
 	letter-spacing: 0.8px;
 	color: #4D1F00;
 }
-#wrapper 
-{
-
-	/*background-color:#F4F4F4;*/
-	background-color: #e8e1ab;
-
-}
-
-#header 
-{
-	
-	/*background:url(../images/bg-body.jpg); 
-	repeat-x :left bottom;*/
-	padding: 50px 0 46px;
-	text-align: center;
-	
-}
-
 /* Menu */ 
 #header .menu {
   float: right;
@@ -92,41 +74,6 @@ p {
 	text-align:center;
 }
 /*service*/
-
-#content .service0 {
-	height:50px;
-}
-#content .service1 {
-	height:400px;
-}
-#content .service2 {
-	height:400px;
-	margin-top:20px;
-}
-#content .service1_1 {
-	margin-left:150px;
-	float:left;
-	width:400px;
-}
-#content .service1_1 a:hover {background: url("images/doctype-hi-res.jpg");}
-#content .service1_2 {
-	float:right;
-	width:600px;
-	
-	margin-right:40px;
-}
-#content .service2_1 {
-	float:left;
-	width:600px;
-	
-	margin-left:150px;
-}
-#content .service2_2 {
-	float:right;
-	width:600px;
-	
-	margin-right:40px;
-}
 #content .homeimg{
 	float:left;
 	width:600px;
@@ -310,11 +257,6 @@ p {
 .paragraphy {
 	margin-left:50px;
 
-}
-#FlashID {
-	margin-top:50px;
-	margin-right:50px;
-	float:right;
 }
 .paragraphy p {
 	color: #4D1F00;

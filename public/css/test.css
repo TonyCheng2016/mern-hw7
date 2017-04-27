@@ -560,15 +560,19 @@ footer {
   height: auto;
   padding: 10px 50px;
   font-size: 20px;
-  margin-left: 60%;
+  float:right;
   border-radius: 10px;
   background-color: gray;
   color: #000;
 }
 #userupdate h1{
   margin: 0;
+	color: white;
 }
-
+#userupdate .name{
+  margin: 0;
+	color: indianred;
+}
 
 
 

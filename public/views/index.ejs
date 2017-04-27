@@ -73,7 +73,11 @@
 						<h2 class="title">人生以服務為目的，而不以奪取為目的。------孫文</h2>
 					</div>
 					<div class="paragraphy">
-					
+						<div id="usernew">
+							<form action="#" id="">
+								<%- include('form'); %>
+							</form>
+						</div>
 						<div id="userinfo">
 							<%- include('persons'); %>
 						</div>
@@ -81,28 +85,7 @@
 						<script src="js/script.js"></script>
 						
 					</div>
-					<div class="homeimg">
-
-						<h1>To-Do List</h1>
-						<% if (userinfos.length) { %>
-							<ul>
-
-								<% userinfos.forEach(function(userinfo){ %>
-
-									<li><input type="checkbox" name="todolist" value="list">
-										<label>行程: </label>
-										<%= userinfo['schedule'] %>
-											<label> Contact User:  </label>
-											<label> 姓氏 </label>
-											<%= userinfo['firstname'] %>
-												<label> 名字 </label>
-												<%= userinfo['lastname'] %>
-									</li>
-									<hr>
-									<% }) %>
-							</ul>
-							<% } %>
-					</div>
+					
 
 				</div>
 

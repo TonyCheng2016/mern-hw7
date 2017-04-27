@@ -19,7 +19,7 @@ router.route('/about.html').get(about);
 router.route('/service.html').get(service);
 router.route('/works.html').get(works);
 router.route('/contact.html').get(contact);
-router.route('/person').post(person);
+
 
 router.route('/person')
   .post(create)

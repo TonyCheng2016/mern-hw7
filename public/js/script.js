@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
   // Create User
-  $("#usernew").on('click', '.btn-post', createUser);
+  $("#usernew").on('click', '.mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent', createUser);
   // Read User
   $("#userinfo").on('click', '.read', readUser);
   // Update User

@@ -532,14 +532,14 @@ footer {
 	color: indianred;
 }
 #userinfo{
-  width: 50%;
-  height: 250px;
+  width:300px;
+  height: auto;
   overflow: auto;
   padding: 10px;
   font-size: 20px;
   border-radius: 30px;
-  margin:auto;
-  background-color: indianred;
+  margin-right:auto;
+  background-color: gray;
   color: #000;
 }
 #userinfo h1{
@@ -556,13 +556,13 @@ footer {
 #userupdate{
   clear: both;
   margin-top: 10px;
-  width:260px;
+  width:300px;
   height: auto;
   padding: 10px 50px;
   font-size: 20px;
   margin-left: 60%;
   border-radius: 10px;
-  background-color: #c2c2c2;
+  background-color: gray;
   color: #000;
 }
 #userupdate h1{

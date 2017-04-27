@@ -539,8 +539,8 @@ footer {
   font-size: 20px;
   border-radius: 30px;
   float:right;
-  background-color: gray;
-  color: #000;
+  background-color: white;
+  color: black;
 }
 #userinfo h1{
   margin: 0;
@@ -560,18 +560,18 @@ footer {
   height: auto;
   padding: 10px 50px;
   font-size: 20px;
-  float:right;
-  border-radius: 10px;
-  background-color: gray;
+  
+  border-radius: 30px;
+  background-color: white;
   color: #000;
 }
 #userupdate h1{
   margin: 0;
-	color: white;
+	color: black;
 }
 #userupdate .name{
   margin: 0;
-	color: indianred;
+	color: orangered;
 }
 
 

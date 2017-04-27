@@ -55,8 +55,8 @@ p {
 	display:block;
 }
 #header div ul li.menu {
-	background:url(../images/border-horizontal.gif) ;
-	repeat-x :left top #252525;
+	/*background:url(../images/border-horizontal.gif) ;*/
+	/*repeat-x :left top #252525;*/
 }
 #header div ul li {
 	float:left;
@@ -75,7 +75,7 @@ p {
   padding-right: 20px;
 }
 .menu {
-	margin-right:50px;
+margin: auto;
 }
 #content {
 	min-height:800px;
@@ -163,13 +163,13 @@ p {
 }
 .message input[type='text'] {
 	height: 20px;
-	width: 590px;
+	width: auto;
 	margin: 0 0 14px;
 	padding: 0 4px;
 }
 .message textarea {
 	height: 50px;
-	width: 590px;
+	width: auto;
 	margin: 0 0 18px;
 	padding: 0 4px;
 	overflow: auto;
@@ -182,8 +182,7 @@ p {
 /*contact*main*/
 .main {
 	float:right;
-	margin-right:100px;
-	margin-top:50px;
+	margin:auto;
 	width: 600px;
 	padding: 0 0 0 32px;
 }
@@ -204,8 +203,7 @@ p {
 	background-position: left bottom;
 	background-repeat: repeat-x;
 	
-	margin-bottom: 16px;
-	margin-left: -28px;
+	margin:auto;
 	padding-left: 30px;
 }
 .main > .last-child, .sidebar ul li.last-child {

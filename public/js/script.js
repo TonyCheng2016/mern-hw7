@@ -28,7 +28,7 @@ function createUser(event) {
         'firstname': $('input#firstname').val(),
         'lastname': $('input#lastname').val(),
         'age': $('input#age').val(),
-        'occupation': $('input#occupation').val()
+        'occupation': $('textarea#occupation').val()
       };
       // Use AJAX to post the object to our adduser service
       $.ajax({

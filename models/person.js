@@ -4,11 +4,11 @@ var Schema = mongoose.Schema;
 
 var personSchema = new Schema({
   //schedule  : String,
-  // firstname : String,
-  // lastname  : String
-  Name: String,
-  Email: String,
-  age: Number,
-  note: String
+  // Name: String,
+  // Email: String,
+  firstname : String,
+  lastname  : String,
+  age       : Number,
+  occupation: String
 });
 module.exports = mongoose.model('Person', personSchema);

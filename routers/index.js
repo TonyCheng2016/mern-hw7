@@ -5,6 +5,12 @@ var express = require('express'),
     works   = require('../controllers/works'),
     contact = require('../controllers/contact'),
     person  = require('../controllers/person'),
+
+    create  = require('../controllers/create'),
+    read    = require('../controllers/read'),
+    readall = require('../controllers/readall'),
+    update  = require('../controllers/update'),
+    del     = require('../controllers/del'),
     router  = express.Router();
 
 router.route('/').get(index);
@@ -15,4 +21,11 @@ router.route('/works.html').get(works);
 router.route('/contact.html').get(contact);
 router.route('/person').post(person);
 
+router.route('/person')
+  .post(create)
+  .get(readall);
+router.route('/person/:id')
+  .get(read)
+  .put(update)
+  .delete(del);
 module.exports = router;

@@ -1,30 +1,123 @@
-$(function(){
-    // 預設顯示第一個 Tab
-    var _showTab = 0;
-    $('.abgne_tab').each(function(){
-        // 目前的頁籤區塊
-        var $tab = $(this);
- 
-        var $defaultLi = $('ul.tabs li', $tab).eq(_showTab).addClass('active');
-        $($defaultLi.find('a').attr('href')).siblings().hide();
- 
-        // 當 li 頁籤被點擊時...
-        // 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
-        $('ul.tabs li', $tab).click(function() {
-            // 找出 li 中的超連結 href(#id)
-            var $this = $(this),
-                _clickTab = $this.find('a').attr('href');
-            // 把目前點擊到的 li 頁籤加上 .active
-            // 並把兄弟元素中有 .active 的都移除 class
-            $this.addClass('active').siblings('.active').removeClass('active');
-            // 淡入相對應的內容並隱藏兄弟元素
-            $(_clickTab).stop(false, true).fadeIn().siblings().hide();
- 
-            return false;
-        }).find('a').focus(function(){
-            this.blur();
-        });
-    });
+// DOM Ready =============================================================
+$(document).ready(function() {
+
+  // Create User
+  $("#usernew").on('click', '.btn-post', createUser);
+  // Read User
+  $("#userinfo").on('click', '.read', readUser);
+  // Update User
+  $("#userinfo").on('click', '.update', updateUser);
+  // Update User Submit
+  $("#userupdate").on('click', ".btn-update", submitUser);
+  // Delete User
+  $("#userinfo").on('click', '.delete', deleteUser);
+
 });
 
+// Create User
+function createUser(event) {
+    // Super basic validation - increase errorCount variable if any fields are blank
+    var errorCount = 0;
+    $('#usernew input').each(function(index, val) {
+        if($(this).val() === '') { errorCount++; }
+    });
 
+    // Check and make sure errorCount's still at zero
+    if(errorCount === 0) {
+      var newUser = {
+        'firstname': $('input#firstname').val(),
+        'lastname': $('input#lastname').val(),
+        'age': $('input#age').val(),
+        'occupation': $('input#occupation').val()
+      };
+      // Use AJAX to post the object to our adduser service
+      $.ajax({
+        type: 'POST',
+        data: newUser,
+        url: '/person',
+        dataType: 'JSON'
+      }).done(function( res ) {
+        var html = new EJS({url: 'views/persons.ejs'}).render(res);
+        $("#userinfo").html(html);
+        $("input").val('');
+      });
+    }
+    else {
+      // If errorCount is more than 0, error out
+      alert('Please fill in all fields');
+      return false;
+    }
+};
+
+// Read User
+function readUser(event) {
+    event.preventDefault();
+    // Use AJAX to post the object to our getuser service
+    $.ajax({
+      type: 'GET',
+      url: '/person/' + $(this).attr('rel')
+    }).done(function( res ) {
+      var html = new EJS({url: 'views/read.ejs'}).render(res);
+      $("#userupdate").html(html);
+    });
+};
+
+// Update User
+function updateUser(event) {
+    event.preventDefault();
+    // Use AJAX to post the object to our getuser service
+    $.ajax({
+      type: 'GET',
+      url: '/person/' + $(this).attr('rel')
+    }).done(function( res ) {
+      var html = new EJS({url: 'views/update.ejs'}).render(res);
+      $("#userupdate").html(html);
+    });
+};
+
+// Update User Submit
+function submitUser(event) {
+  var newUser = {
+    'firstname': $('#firstname0').val(),
+    'lastname': $('#lastname0').val(),
+    'age': $('#age0').val(),
+    'occupation': $('#occupation0').val()
+  };
+
+  // Use AJAX to put the object to our updateuser service
+  $.ajax({
+    type: 'PUT',
+    data: newUser,
+    url: '/person/' + $(this).attr('name'),
+    dataType: 'JSON'
+  }).done(function( res ) {
+    $("#userupdate").html("");
+    var html = new EJS({url: 'views/persons.ejs'}).render(res);
+    $("#userinfo").html(html);
+  });
+};
+
+// Delete User
+function deleteUser(event) {
+    event.preventDefault();
+    // Pop up a confirmation dialog
+    var confirmation = confirm('Are you sure you want to delete this user?');
+
+    // Check and make sure the user confirmed
+    if (confirmation === true) {
+
+        // If they did, do our delete
+        $.ajax({
+            type: 'DELETE',
+            url: '/person/' + $(this).attr('rel')
+        }).done(function( res ) {
+          var html = new EJS({url: 'views/persons.ejs'}).render(res);
+          $("#userinfo").html(html);
+        });
+
+    }
+    else {
+        // If they said no to the confirm, do nothing
+        return false;
+    }
+};

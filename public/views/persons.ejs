@@ -1,10 +1,13 @@
-<h1>Users Stored</h1>
+<h1>Users Checked</h1>
 <% if (userinfos.length) { %>
   <ul>
     <% userinfos.forEach(function(userinfo){ %>
       <li>
         <div class='name'>
-          <%= userinfo['firstname'] %> <%= userinfo['lastname'] %>
+          Your name is <%= userinfo['firstname'] %>
+        </div>
+        <div class='name'>
+          and email is <%= userinfo['lastname'] %>
         </div>
         <a href="" class='read' rel=<%= userinfo['_id']%>>VIEW</a>
         <a href="" class='delete' rel=<%= userinfo['_id']%>>DEL</a>

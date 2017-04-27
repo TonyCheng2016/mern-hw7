@@ -3,7 +3,7 @@ mongoose.connect('mongodb://test:test@ds161190.mlab.com:61190/wk7dbtest');
 var Schema = mongoose.Schema;
 
 var personSchema = new Schema({
-  schedule  : String,
+  //schedule  : String,
   // firstname : String,
   // lastname  : String
   Name: String,

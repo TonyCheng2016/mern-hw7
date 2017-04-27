@@ -40,6 +40,7 @@ function createUser(event) {
         var html = new EJS({url: 'views/persons.ejs'}).render(res);
         $("#userinfo").html(html);
         $("input").val('');
+        $("textarea").val('');
       });
     }
     else {

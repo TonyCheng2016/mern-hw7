@@ -22,8 +22,8 @@ p {
 #header 
 {
 	
-	background:url(../images/bg-body.jpg); 
-	repeat-x :left bottom;
+	/*background:url(../images/bg-body.jpg); 
+	repeat-x :left bottom;*/
 	padding: 50px 0 46px;
 	text-align: center;
 	
@@ -55,8 +55,8 @@ p {
 	display:block;
 }
 #header div ul li.menu {
-	/*background:url(../images/border-horizontal.gif) ;*/
-	/*repeat-x :left top #252525;*/
+	/*background:url(../images/border-horizontal.gif) ;
+	repeat-x :left top #252525;*/
 }
 #header div ul li {
 	float:left;
@@ -75,7 +75,7 @@ p {
   padding-right: 20px;
 }
 .menu {
-margin: auto;
+	margin-right:50px;
 }
 #content {
 	min-height:800px;
@@ -163,13 +163,13 @@ margin: auto;
 }
 .message input[type='text'] {
 	height: 20px;
-	width: auto;
+	width: 590px;
 	margin: 0 0 14px;
 	padding: 0 4px;
 }
 .message textarea {
 	height: 50px;
-	width: auto;
+	width: 590px;
 	margin: 0 0 18px;
 	padding: 0 4px;
 	overflow: auto;
@@ -182,7 +182,8 @@ margin: auto;
 /*contact*main*/
 .main {
 	float:right;
-	margin:auto;
+	margin-right:100px;
+	margin-top:50px;
 	width: 600px;
 	padding: 0 0 0 32px;
 }
@@ -203,7 +204,8 @@ margin: auto;
 	background-position: left bottom;
 	background-repeat: repeat-x;
 	
-	margin:auto;
+	margin-bottom: 16px;
+	margin-left: -28px;
 	padding-left: 30px;
 }
 .main > .last-child, .sidebar ul li.last-child {

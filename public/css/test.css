@@ -27,11 +27,7 @@ p {
 	text-shadow:0 -1px 0 #524437;
 	text-transform:uppercase;
 }
-.logo-icon  img {
-	float:left;
-	margin-top:-40px;
-	margin-left: 100px;
-}
+
 #header div ul li a:hover {
 	color:red;
 	display:block;

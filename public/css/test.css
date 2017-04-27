@@ -520,11 +520,19 @@ footer {
 }
 /*data*/
 #usernew{
-  margin-left: 200px;
+  margin:auto;
   float: left;
 }
+#usernew h1{
+  margin: 0;
+	color: white;
+}
+#usernew .name{
+  margin: 0;
+	color: indianred;
+}
 #userinfo{
-  width: 340px;
+  width: 60%;
   height: 250px;
   overflow: auto;
   padding: 10px;
@@ -536,14 +544,14 @@ footer {
 }
 #userinfo h1{
   margin: 0;
-  margin-left: 35px;
+	color: white;
 }
 #userinfo ul{
   list-style-type: none;
 }
 #userinfo a{
   font-size: 16px;
-  text-decoration: none;
+  text-decoration: bold;
 }
 #userupdate{
   clear: both;

@@ -63,64 +63,43 @@
 			</nav>
 		</div>
 		<main class="mdl-layout__content">
-			<div class="mdl-grid portfolio-max-width">
-
-				<div id="content">
-					<div class="sidebar">
-						<div>
-							<h2>Contact Info</h2>
-							<ul class="contact">
-								<h3>Office</h3>
-								<li>
-									<p>
-										Address:台北市內湖區
-									</p>
-								</li>
-								<li>
-									<p class="phone">
-										Phone: (02) 26580895
-									</p>
-								</li>
-								<li>
-									<p class="fax">
-										Fax: (+20) 000 222 988
-									</p>
-								</li>
-								<li>
-									<p class="mail">
-										Email: tony999.t580895@msa.hinet.net
-									</p>
-								</li>
-								<li>
-									<p class="">
-										Phone:0937922587
-									</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="main">
-						<h1>Contact</h1>
-						<h2>Send Us a Quick Message</h2>
-						<p>
-							You can remove any link to our website from this website template, you're free to use this website template without linking
-							back to us.If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.
-						</p>
-						<form action="/person" method="post" class="message">
-							<h1>Add List !</h1>
-							Today's schedule: <input type="text" id="schedule" name="schedule" /><br />
-							<label>First Name</label>
-							<input type="text" id="firstname" name="firstname">
-							<label>Last Name</label>
-							<input type="text" id="lastname" name="lastname">
-							<label>Email Address</label>
-							<input type="text" id="email" name="email">
-							<label>Message</label>
-							<textarea></textarea>
-							<input type="submit" value="Send Message">
-						</form>
-					</div>
-				</div>
+			<div class="mdl-grid portfolio-max-width portfolio-contact">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Contact</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/contact-image.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+                        </p>
+                        <p>
+                            Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet.
+                        </p>
+                        <form action="#" class="">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                <label class="mdl-textfield__label" for="Name">Name...</label>
+                                <span class="mdl-textfield__error">Letters and spaces only</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="Email">
+                                <label class="mdl-textfield__label" for="Email">Email...</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+                                <label class="mdl-textfield__label" for="note">Enter note</label>
+                            </div>
+                            <p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                    Submit
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
 
 			</div>
 			<footer class="mdl-mini-footer">
